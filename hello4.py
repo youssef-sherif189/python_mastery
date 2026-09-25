@@ -1,85 +1,181 @@
-# hello = input("enter your name; ")
-# age = input("enetr your age; ")
-# contry = input("enter your contry; ")
+#  Tupple
+# tupple with one element
+thestr1 = ("osama")
+thestr2 = "osama"
+print(thestr1)
+print(thestr2)
+print(type(thestr1))
+print(type(thestr2))
+mytuble1 = ("osama",)
+mytuble2 = "osama",
+print(mytuble1)
+print(mytuble2)
+print(type(mytuble1))
+print(type(mytuble2))
+print(len(mytuble1))
+print(len(mytuble2))
 
-# print(f"name: {hello}")
-# print(f"age: {age}")
-# print(f"contry: {contry}")
+# Tuple Concatenation
+a = (1, 2, 3, 4)
+b = (9, 8, 7, 6)
+c = a + b
+d = a + ("J", "O", "E", True) + b
+print(c)
+print(d)
 
+# Tuple, list, string repeat(*)
 
-# hello = input("enter your name: ")
-# age =input("enter your age: ")
-# contry = input("enter your contry; ")
+mystring = "Joe"
+myList = [1, 2]
+mytuple = ("A", "B")
+print(mystring * 6)
+print(myList * 6)
+print(mytuple * 6)
 
-# print(f"hello: {hello}", f"i am: {age} years old", f"i live in: {contry}")
+# Methods => count()
+a = (1, 2, 8, 4, 5, 8, 9)
+print(a.count(8))
 
-name = "youssef"
-print(type(name))
-age = "18"
-print(type(age))
-x = "chaniese"
-print(type(x))
+# Methods => index()
+b = (7, 2, 9, 4, 5, 8)
+print(b.index(2))
+# print("the position of indetypesx is: " + b.index(2)) # Error
+print("the position of index is: {:d}".format(b.index(2)))
+print(f"the position of index is: {b.index(2)}")
 
-# name =input('enter your name : ') 
-# age =input('enter your age: ')
-# c =input('enter your country')
+# Tupple Destruct
+a =("A", "B", 4, "C")
+x, y, _, z = a # (or write) "A", "B", "C"
+print(x)
+print(y)
+print(z)
 
-# print(f"hello {name} how are you doing ,your age is {age} ,and my country is {c}")
-
-# name =input('enter your name : ') 
-# age =input('enter your age: ')
-# c =input('enter your country')
-# print(f"""hello {name} how are you doing
-# your age is {age}
-# my country is {c}""")
-
-name ='youssef'
-print(name[1])
-print(name[2])
-print(name[-1])
-
-name ="youssef"
-print(name[1:3])
-print(name[4:6])
-
-name ="#@#@youssef#@#@"
-print(name.strip("#, @"))
-
-num = "9"
-print(num.zfill(4))
-num = "15"
-print(num.zfill(4))
-num = "950"
-print(num.zfill(4))
-num = "1500"
-print(num.zfill(4))
-
-name_one = "youssef"
-print(name_one.rjust(20, "@"))
-name_two = "youssef_sherif"
-print(name_two.rjust(20, "@"))
-
-name_three = "YoUSsEf"
-name_four = "yOusSeF"
-print(name_three.swapcase())
-print(name_four.swapcase())
-
-msg = "I Love Python And Although Love Elzero Web School"
-print(msg.count("Love"))
-
-name = "Elzero"
-print(name.rfind("z"))
-
-msg = "I <3 Python And Although <3 Elzero Web School"
-print(msg.replace("<3", "love", 1))
-print(msg.replace("<3", "love"))
-
-name = "Osama"
-age = 38
-country = "Egypt"
-print(f"my name Is {name} my age is {age} my country is {country}") 
-# print(f"my name Is {name}", f"my age is {age}", f"my country is {country}")
+# SET 
+# [1] Set items are enclosed in curly braces 
+# [2] Set items are not Ordered And Not Indexed
+# [3] Set Indexing and Slicing cant be done 
+# [4] Set has only Immutable data  () list and Dictare not
+# [5] Set items is unique
 
 
+Mysetone = {"joe", "sher", 100}
+print(Mysetone)
+# print(Mysetone[0])
 
+# Slicing cant be done
+Mysettwo = {1, 2, 3, 4,5, 6, 7}
+print(Mysettwo)
+# print(Mysettwo[0:3])
 
+# Set has only Immutable data types
+# Setthree = {"JOE", True, 100.5, 4,[5, 6, 1]} # unhashable type: 'list'
+Setthree = {"JOE", True, 100.5, 4,(5, 6, 1)} 
+print(Setthree)
+
+# Set items is unique
+SetFour = {1, 2, 3, 1, "joe", "one", "joe"}
+print(SetFour)
+
+ # Set Methods
+# clear()
+a = {1, 2, 3, 4}
+a.clear()
+print(a)
+
+# union 
+b = {"one", "two", "three"}
+c = {"1", "2", "3"}
+print(b | c)
+print(b.union(c))
+
+# add()
+d = {4, 5, 6, 7}
+# d.add(8, 9)
+d.add(8)
+d.add(9)
+print(d)
+
+# copy()
+e = {1, 2, 3, 4}
+f = e.copy()
+print(e)
+print(f)
+
+e.add(6)
+print(e)
+print(f)
+
+# remove()
+g = {1, 2, 3, 4, 5, 6}
+g.remove(1)
+# g.remove(7)
+print(g)
+
+# discard()
+u = {2, 4, 6, 8, 9}
+u.discard(2)
+u.discard(7)
+print(u)
+
+# pop()
+i = {"A", True, 1, 2, 3, 4, 5}
+print(i.pop())
+
+# update()
+j = {1, 2, 3}
+k = {1, "A", "B", 2}
+j.update(['Html', "Css"])
+j.update(k)
+print(j)
+print("=" * 40)
+# Set Methods
+# part 2
+
+# diffirence()
+a = {1, 2, 3, 4, 5}
+b = {1, 2, 3, "joe", 'sherif'}
+print(a)
+print(a.difference(b)) # a - b
+print(a)
+
+print("=" * 40)
+
+# diffirince_update()
+c = {1, 2, 3, 4, 5}
+d = {1, 2, 3, "joe", 'sherif'}
+print(c)
+c.difference_update(d) # c - d
+print(c)
+
+print("=" * 40)
+
+# intersection()
+e = {1, 2, 3, 4, "X", "Joe"}
+f = {"Joe", "X", 2}
+print(e)
+print(e.intersection(f)) # e & f
+print(e)
+print("=" * 40)
+
+# intersection_update()
+g = {1, 2, 3, 4, "X", "Joe"}
+h = {"Joe", "X", 2}
+print(g)
+g.intersection_update(h) # e & f
+print(g)
+print("=" * 40)
+
+# symmetric difference()
+k = {1, 2, 3, 4, 5, "X"}
+l = {"Joe", "X", 1, 2, 4, "Y"}
+print(k)
+print(k.symmetric_difference(l)) # k ^ l
+print(k)
+print("=" * 40)
+
+# symmetric difference update()
+i = {1, 2, 3, 4, 5, "X"}
+j = {"Joe", "X", 1, 2, 4, "Y"}
+print(i)
+print(i.symmetric_difference_update(j)) # i ^ j
+print(i)

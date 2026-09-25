@@ -1,125 +1,105 @@
-msg ="i love python"
-lang = "veryy much"
+a = "I Love Python"
+print(a.index("P")) # This will print the index of the first occurrence of the character "P" in the string "I Love Python", which is 7
+print(a.index("P", 0, 10)) # This will print the index of the first occurrence of the character "P" in the string "I Love Python" between index 0 and 10, which is 7
+ # print(a.index("P", 0, 5)) # This will raise a ValueError because the character "P" is not found in the string "I Love Python" between index 0 and 5
 
-print(msg+lang)
-print(msg+" "+lang)
+b = "I Love Python"
+print(b.find("P")) # This will print the index of the first occurrence of the character "P" in the string "I Love Python", which is 7
+print(b.find("P", 0, 10)) # This will print the index of the first occurrence of the character "P" in the string "I Love Python" between index 0 and 10, which is 7
+print(b.find("P", 0, 5)) # This will print -1 because the character "P" is not found in the string "I Love Python" between index 0 and 5
 
-a = "frist \
-secound \
-third"
-b = "1 \
-2 \
-3"
-print(a + " "+ b)
-
-mystringone = 'this single quote string' # This is a single quote string
-mystringtwo = "this double quote string" # This is a double quote string
-print(mystringone)
-print(mystringtwo)
-mystringthree = 'this single quote "test"' # This is a single quote string with a double quote inside
-mystringfour = "this double quote 'test'" # This is a double quote string with a single quote inside
-print(mystringthree)
-print(mystringfour)
-mysrtingfive = '''first
-secound
-third
-four''' # This is a triple quote string with multiple lines
-mysrtingsix = """1
-2
-3
-4""" # This is a triple quote string with multiple lines
-print(mysrtingfive)
-print(mysrtingsix)
-
-myString = "I Love Python" 
-print(myString[0]) # This will print the first character of the string "I Love Python", which is "I"
-print(myString[2])
-print(myString[-1]) # first character form end This will print the last character of the string "I Love Python", which is "n"
-print(myString[0:5]) # This will print the first five characters of the string "I Love Python", which is "I Lov"
-print(myString[:10]) # This will print the first ten characters of the string "I Love Python", which is "I Love Pyt"
-print(myString[10:]) # This will print the characters of the string "I Love Python" starting from index 10 to the end, which is "on"
-
-print(myString[:]) #full data
-print(myString[::1]) #full data with step of 1
-print(myString[::2]) #full data with step of 2
-print(myString[::3]) #full data with step of 3
-
-a = "   I Love Python   "
-print(a.strip()) # This will print the string "I Love Python" without the leading and trailing spaces
-print(a.rstrip()) # This will print the string "   I Love Python" without the trailing spaces
-print(a.lstrip()) # This will print the string "I Love Python   " without the leading spaces
-
-b = "###I LOVE PYTHON###"
-print(b.strip("#")) # This will print the string "I LOVE  PYTHON" without the leading and trailing "#" characters
-print(b.rstrip("#")) # This will print the string "### I LOVE  PYTHON" without the trailing "#" characters
-print(b.lstrip("#")) # This will print the string "I LOVE  PYTHON ###" without the leading "#" characters
-c = "@#@#@#I LOVE PYTHON@#@#@"
-print(c.strip("@#"))
-print(c.rstrip("@#"))
-print(c.lstrip("@#"))
-
-b = "I Love 2d Graph and 3g Tec and python"
-print(b.title())
-
-b = "I love 2d Graph and 3g Tec and python"
-print(b.capitalize())
-
-c, d, e, y = "1" , "11" , "111" , "1111"
-print(c)
-print(d)
-print(e)
-print(y)
-
-print(c.zfill(4))
-print(d.zfill(4))
-print(e.zfill(4))
-print(y.zfill(3))
-
-g= "Youssef"
-print(g.upper())
-
-h = "YoUssef"
-print(h.lower())
-
-a = "I Love Python and PHP MYSQL"
-print(a.split())
-
-b= "I-Love-Python-and-PHP-MySQL"
-print(b.split("-"))
-
-c = "I-Love-Python-and-PHP-MySQL"
-print(c.split("-" , 2))
-
-d = "I-Love-Python-and-PHP-MySQL"
-print(d.rsplit("-" , 2))
-
-# center
-e = "youssef"
-print(e.center(7))
-print(e.center(9, "#"))
-print(e.center(17, "@"))
-
-# count()
-f = "I Love Python and PHP bec PHP is easy"
-print(f.count("PHP"))
-print(f.count("PHP", 0, 25)) # only one PHP word is in the first 25 characters of the string
-
-# swapcase()
-g = "I Love Python"
-h = "i lOVe pYTHON"
-print(g.swapcase())
-print(h.swapcase())
-
-# startswith()
-i = "I Love Python"
-print(i.startswith("I"))
-print(i.startswith("S")) # false bec not start with s
-print(i.startswith("P", 7, 12))
-
-# endswith()
-j = "I Love Python"
-print(j.endswith("n"))
-print(j.endswith("P")) # false bec not end with P
-print(j.endswith("e", 2, 6))
+c = "youssef"
+print(c.rjust(20))
+print(c.rjust(20, "#"))
+print(c.ljust(20, "#"))
 
 
+e = """first line
+second line
+third line"""
+print(e.splitlines()) # This will print a list of the lines in the string e, which is ['first', 'second', 'third']
+
+d = "first line\nsecond line\nthird line"
+print(d.splitlines()) # This will print a list of the lines in the string d, which is ['first line', 'second line', 'third line']
+
+f  = "hello\tworld\tI\tlove\tpython"
+print(f)
+print(f.expandtabs(2)) # This will print the string f with tab characters expanded to 2 spaces
+print(f.expandtabs(20))
+
+one = "I Love Python And I 3G"
+two = "I Love Python And I 3g"
+print(one.istitle())
+print(two.istitle())
+
+three = " "
+four = ""
+print(three.isspace())
+print(four.isspace())
+
+five = "i love python"
+six = "I Love Python"
+print(five.islower())
+print(six.islower())
+
+seven = "youssef_3mk"
+eight = "Youssef3mk100"
+nine = "Youssef--3mk"
+print(seven.isidentifier())
+print(eight.isidentifier())
+print(nine.isidentifier())
+
+x = "AaaaaaBbbbbb"
+y = "AaaaaaBbbbbb111112222"
+print(x.isalpha())
+print(y.isalpha())
+
+d = "AaaaaaBbbbbb"
+z= "AaaaaaBbbbbb111112222"
+print(d.isalnum())
+print(z.isalnum())
+
+l = "Hello One Two Three One One"
+print(l.replace("One", "1")) # This will replace all occurrences of the substring "One" with "1" in the string l, resulting in "Hello 1 Two Three 1 1"
+print(l.replace("One", "1", 1)) # This will replace the first two occurrences of the substring "One" with "1" in the string l, resulting in "Hello 1 Two Three One"
+print(l.replace("One", "1", 2)) # This will replace the first two occurrences of the substring "One" with "1" in the string l, resulting in "Hello 1 Two Three 1 One"
+
+myList = ["Youssef", "sherif", "3mk"]
+print(" ".join(myList)) # This will join the elements of the list myList into a single string, separated by spaces, resulting in "Youssef sherif 3mk"
+print("-".join(myList)) # This will join the elements of the list myList into a single string, separated by hyphens, resulting in "Youssef-sherif-3mk"
+print(", ".join(myList))
+print(type(", ".join(myList)))
+
+name = "Youssef"
+age = 18 
+rank = 100
+print("myname is : " + name)
+print("myname is: %s "% name)
+print("myname is: %s and my age is : %d" % (name, age))
+print("myname is : %s and my age is : %d and my rank is : %f " % (name , age , rank))
+
+# %s => string
+# %d => integer or number
+# %f => float
+
+n = "Youssef"
+l = "AI"
+y = 10
+print("Iam %s and I work in %s and I have %d years of experience" % (n,l,y))
+
+x = "Yassin"
+z = "bmw company"
+y = 9
+print("I am %s and work in %s and I have %d years of experience" % (x,z,y))
+
+myNumber = 10
+print("my Number is: %d" % myNumber)
+print("my Number is: %f" % myNumber)
+print("my Number is: %.2f" % myNumber)
+
+# myLongString = "Hello Every One I Am Youssef"
+# print("Massage is %s" % myLongString)
+# print("Massage is %.5s" % myLongString)
+
+myLongString = "Youssef Love All Muslim And Want Anyone To Be Best"
+print("Massage is %s" % myLongString)
